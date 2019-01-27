@@ -1,12 +1,9 @@
 ## Profile
 
 - @temoki / Tomoki Kobayashi
-- 🇯🇵 Gifu, Japan
-- 📱 Mobile App Developer
+- Gifu, Japan 🇯🇵
+- Mobile App Developer 📱
 - Loves 👪 🍎 📱 📷 👓 🍛 🐢 🚗 🚴 ...
-
-### Links
-
 - [Twitter](https://twitter.com/temoki)
 - [Facebook](https://www.facebook.com/temoki.kobayashi)
 - [Instagram](https://www.instagram.com/temoki)
