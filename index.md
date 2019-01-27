@@ -13,13 +13,15 @@
 
 ## Works
 
-### iOS
+### AR App for Reversible Destiny Yoro Park (2018)
 
-#### AR App for Reversible Destiny Yoro Park (2018)
-
-- iPad App
+- iOS AR app available in [Reversible Destiny Yoro Park](http://www.yoro-park.com/facility-map/hantenchi/).
 - Swift, ARKit, SceneKit
 
+### AR App with DJI Drone (2018)
+
+- iOS AR app works with a drone made by DJI.
+- Swift, SceneKit, [DJI Mobile SDK](https://developer.dji.com/mobile-sdk/)
 
 ### Tortoise Graphics (2017)
 
@@ -28,26 +30,25 @@
 - Swift, CoreGraphics
 - [Open Source on GitHub](https://github.com/temoki/TortoiseGraphics).
 
-#### Doki Doki Glass (2015)
+### Doki Doki Glass (2015)
 
-- iPhone App
+- iPhone app that shines [Funiki Ambient Glasses](http://fun-iki.com) according to the pounding obtained from heart rate sensor.
 - [VanApp by Fenrir Inc.](https://van-app.com/dokidokiglass)
-- [Funiki Ambient Glasses](http://fun-iki.com)
 - Objective-C, Swift, CoreBluetooth, [Funiki SDK](https://github.com/FUNIKImegane/FunikiSDK)
 
-#### Real Halftone (2011)
+### Real Halftone (2011)
 
-- iPhone App
+- iPhone photo app that generates a haltone dot.
 - Objective-C, CoreGraphics, CoreImage
 
-#### Slow Shutter (2009)
+### Slow Shutter (2009)
 
-- iPhone App
+- iPhone camera app that you can enjoy a simulation of slow shutter.
 - Objective-C, CoreGraphics, AVFoundation, NEON
 
-#### PICT.Edge (2009)
+### PICT.Edge (2009)
 
-- iPhone App
+- iPhone photo app that is able to extract edges in the picture and blend them to the original picture.
 - Objective-C, CoreGraphics, NEON
 
 ## Career
