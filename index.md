@@ -1,22 +1,27 @@
-### Profile
+## Profile
 
-```json
-{
-  "name"     : "Tomoki Kobayashi",
-  "gender"   : "Male",
-  "location" : "Gifu, Japan 🇯🇵",
-  "job"      :  "iOS/Android native app engineer",
-  "loves"    : ["👪", "🍎", "📱", "📷", "👓", "🍛", "🐢", "🚗", "🚴"]
-}
-```
+- **Tomoki Kobayashi**
+- 🇯🇵 Gifu, Japan
+- 📱 Mobile App Developer
+- Loves 👪 🍎 📱 📷 👓 🍛 🐢 🚗 🚴 ...
 
-### Works
+## Works
 
-_T.B.D._
+### iOS Apps
+
+- AR App for Reversible Destiny Yoro Park
+- Doki Doki Glass
+- Real Halftone
+- Slow Shutter
+- PICT.Edge
+
+### Swift Playgrounds Book
+
+- Tortoise Graphics
 
 ### Career
 
-#### [stmn, inc.](https://stmn.co.jp)
+### [stmn, inc.](https://stmn.co.jp)
 
 - Oct. 2018 ~
 - Software Engineer
@@ -25,7 +30,7 @@ _T.B.D._
 - Android, Android Studio, Java, Kotlin, ...
 - Social networking service for enterprise
 
-#### [Fenrir inc.](https://www.fenrir-inc.com)
+### [Fenrir inc.](https://www.fenrir-inc.com)
 
 - Jan. 2015 ~ Sep. 2018
 - Project Manager / Software Engineer
@@ -35,7 +40,7 @@ _T.B.D._
 - Lcation based social networking service
 - Information distribution service for local governments
 
-#### System Integrator
+### System Integrator
 
 - Apr. 2005 ~ Dec. 2014
 - Project Manager / Software Engineer
