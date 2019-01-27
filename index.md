@@ -1,9 +1,18 @@
 ## Profile
 
-- **Tomoki Kobayashi**
+- @temoki / Tomoki Kobayashi
 - 🇯🇵 Gifu, Japan
 - 📱 Mobile App Developer
 - Loves 👪 🍎 📱 📷 👓 🍛 🐢 🚗 🚴 ...
+
+### Links
+
+- [Twitter](https://twitter.com/temoki)
+- [Facebook](https://www.facebook.com/temoki.kobayashi)
+- [Instagram](https://www.instagram.com/temoki)
+- [Pinterest](https://www.pinterest.jp/temoki)
+- [GitHub](https://github.com/temoki)
+- [Speaker Deck](https://speakerdeck.com/temoki)
 
 ## Works
 
@@ -19,7 +28,7 @@
 
 - Tortoise Graphics
 
-### Career
+## Career
 
 ### [stmn, inc.](https://stmn.co.jp)
 
