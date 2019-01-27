@@ -1,8 +1,8 @@
 theme: jekyll-theme-minimal
 title: temoki.com
-#description: [A short description of your site's purpose]
+description: iOS/Android App Developer in 🇯🇵
 
 # Optional
 logo: assets/profile.jpg
-show_downloads: "false"
+show_downloads: false
 #google_analytics: [Your Google Analytics tracking ID]
