@@ -1,3 +1,13 @@
-# temoki.github.io
+## Profile
 
-Hello World!
+```swift
+struct Profile {
+  var name: String
+  var gender: String
+}
+
+let temoki = Profile(
+  name: "Tomoki Kobayashi",
+  gender: "Male"
+)
+```
