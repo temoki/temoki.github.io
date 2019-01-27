@@ -1,6 +1,6 @@
-## Profile
+## @temoki
 
-- @temoki / Tomoki Kobayashi
+- Tomoki Kobayashi
 - Gifu, Japan 🇯🇵
 - Mobile App Developer 📱
 - Loves 👪 🍎 📱 📷 👓 🍛 🐢 🚗 🚴 ...
@@ -13,17 +13,42 @@
 
 ## Works
 
-### iOS Apps
+### iOS
 
-- AR App for Reversible Destiny Yoro Park
-- Doki Doki Glass
-- Real Halftone
-- Slow Shutter
-- PICT.Edge
+#### AR App for Reversible Destiny Yoro Park (2018)
 
-### Swift Playgrounds Book
+- iPad App
+- Swift, ARKit, SceneKit
 
-- Tortoise Graphics
+
+### Tortoise Graphics (2017)
+
+- [Swift Playgrounds Book](https://www.apple.com/jp/swift/playgrounds/) ([Subscription link](https://temoki.github.io/TortoiseGraphics/playground-subscription-feed/locales.json))
+- A turtle graphics (a key feature of the [LOGO](https://ja.wikipedia.org/wiki/LOGO)) engine written in Swift.
+- Swift, CoreGraphics
+- [Open Source on GitHub](https://github.com/temoki/TortoiseGraphics).
+
+#### Doki Doki Glass (2015)
+
+- iPhone App
+- [VanApp by Fenrir Inc.](https://van-app.com/dokidokiglass)
+- [Funiki Ambient Glasses](http://fun-iki.com)
+- Objective-C, Swift, CoreBluetooth, [Funiki SDK](https://github.com/FUNIKImegane/FunikiSDK)
+
+#### Real Halftone (2011)
+
+- iPhone App
+- Objective-C, CoreGraphics, CoreImage
+
+#### Slow Shutter (2009)
+
+- iPhone App
+- Objective-C, CoreGraphics, AVFoundation, NEON
+
+#### PICT.Edge (2009)
+
+- iPhone App
+- Objective-C, CoreGraphics, NEON
 
 ## Career
 
