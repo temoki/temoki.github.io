@@ -18,11 +18,6 @@
 - iOS AR app available in [Reversible Destiny Yoro Park](http://www.yoro-park.com/facility-map/hantenchi/).
 - Swift, ARKit, SceneKit
 
-### AR App with DJI Drone (2018)
-
-- iOS AR app works with a drone made by DJI.
-- Swift, SceneKit, [DJI Mobile SDK](https://developer.dji.com/mobile-sdk/)
-
 ### Tortoise Graphics (2017)
 
 - [Swift Playgrounds Book](https://www.apple.com/jp/swift/playgrounds/) ([Subscription link](https://temoki.github.io/TortoiseGraphics/playground-subscription-feed/locales.json))
@@ -58,7 +53,7 @@
 - Oct. 2018 ~
 - Software Engineer
 - Mobile app development of the company service "[TUNAG](https://tunag.jp)"
-- iOS, Xcode, Swift, Objective-C, ...
+- iOS, Xcode, Swift, Objective-C, Firebase, RxSwift, ...
 - Android, Android Studio, Java, Kotlin, ...
 - Social networking service for enterprise
 
@@ -67,8 +62,8 @@
 - Jan. 2015 ~ Sep. 2018
 - Project Manager / Software Engineer
 - Contract-based mobile app development project
-- iOS, Xcode, Swift, Objective-C, ...
-- Android, Android Studio, Java, Kotlin, ...
+- iOS, Xcode, Swift, Objective-C, Realm, ...
+- Android, Android Studio, Java, Kotlin, Realm, ...
 - Lcation based social networking service
 - Information distribution service for local governments
 
