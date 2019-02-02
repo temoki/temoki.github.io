@@ -8,7 +8,7 @@
 - [Facebook](https://www.facebook.com/temoki.kobayashi)
 - [Instagram](https://www.instagram.com/temoki)
 - [Pinterest](https://www.pinterest.jp/temoki)
-- [GitHub](https://github.com/temoki)
+- [Medium](https://medium.com/@temoki)
 - [Speaker Deck](https://speakerdeck.com/temoki)
 
 ## Works
@@ -64,7 +64,7 @@
 - Contract-based mobile app development project
 - iOS, Xcode, Swift, Objective-C, Realm, ...
 - Android, Android Studio, Java, Kotlin, Realm, ...
-- Lcation based social networking service
+- Location based social networking service
 - Information distribution service for local governments
 
 ### System Integrator
