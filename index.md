@@ -11,6 +11,8 @@
 - [Medium](https://medium.com/@temoki)
 - [Speaker Deck](https://speakerdeck.com/temoki)
 
+<img src="assets/AppleTeacherSwiftPlaygrounds_black.svg" width="160">
+
 ## Community
 
 ### Nagoya iOS meetup
