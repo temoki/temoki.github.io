@@ -4,14 +4,18 @@
 - Gifu, Japan 🇯🇵
 - Mobile App Developer 📱
 - Loves 👪 🍎 📱 📷 👓 🍛 🐢 🚗 🚴 ...
+
+<img src="assets/AppleTeacherSwiftPlaygrounds_black.svg" width="160">
+
+### SNS
+
 - [Twitter](https://twitter.com/temoki)
 - [Facebook](https://www.facebook.com/temoki.kobayashi)
 - [Instagram](https://www.instagram.com/temoki)
 - [Pinterest](https://www.pinterest.jp/temoki)
 - [Medium](https://medium.com/@temoki)
+- [Qiita](https://qiita.com/temoki)
 - [Speaker Deck](https://speakerdeck.com/temoki)
-
-<img src="assets/AppleTeacherSwiftPlaygrounds_black.svg" width="160">
 
 ## Community
 
