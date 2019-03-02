@@ -99,6 +99,15 @@ I developed individually and sold it at the iOS App Store.
 > - iOS, Xcode, Swift, Objective-C, Realm, ...
 > - Android, Android Studio, Java, Kotlin, Realm, ...
 
+#### Contents
+
+- [Fenrir Developer's Blog](https://blog.fenrir-inc.com/)
+    - [チームでの開発を改善するのにピッタリの一冊！](https://blog.fenrir-inc.com/jp/2017/02/team_development.html)
+    - [名古屋でモバイル勉強会 Mobile Act NAGOYA #1 を開催しました！](https://blog.fenrir-inc.com/jp/2016/08/mobile-act-nagoya-1.html)
+    - [ピカピカ！自分をもっともっと見てもらうためのメガネ？](https://blog.fenrir-inc.com/jp/2015/12/pikapikamegane.html)
+- [Wantedly / Fenrir](https://www.wantedly.com/companies/fenrir)
+    - [「Mobile Act」というモバイルアプリ勉強会をやっています！](https://www.wantedly.com/companies/fenrir/post_articles/114424)
+
 ### System Integrator
 
 - Project manager and software engineer in contract-based system development project
