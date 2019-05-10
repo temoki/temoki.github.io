@@ -29,7 +29,7 @@
 
 ## Works
 
-### AR App for Reversible Destiny Yoro Park (2018)
+### Yoro Reversible Destiny AR (2018)
 
 It is an AR iOS application that can be used in [Reversible Destiny Yoro Park](http://www.yoro-park.com/facility-map/hantenchi/).
 This is one program of [Yoro Art Picnic](http://yoro-arts.com) in 2018.
