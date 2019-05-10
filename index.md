@@ -95,7 +95,7 @@ I developed individually and sold it at the iOS App Store.
 #### Contents
 
 - [TUNAG iOSアプリのチャット機能をVIPERアーキテクチャで開発した話](https://stmn.co.jp/tech/4037)
-- [https://stmn.co.jp/tech/3419](https://stmn.co.jp/tech/3419)
+- [try! Swift 2019 Tokyo 1日目 に参加してきました！](https://stmn.co.jp/tech/3419)
 
 ### [Fenrir inc.](https://www.fenrir-inc.com)
 
