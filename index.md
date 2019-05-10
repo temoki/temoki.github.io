@@ -35,6 +35,8 @@ It is an AR iOS application that can be used in [Reversible Destiny Yoro Park](h
 This is one program of [Yoro Art Picnic](http://yoro-arts.com) in 2018.
 I participated as a main programmer in this program.
 
+- [Yoro Reversible Destiny AR (YouTube)](https://youtu.be/XJ8ZDQxBQZ0)
+
 > - Swift, ARKit, SceneKit
 
 ### Tortoise Graphics (2017-)
