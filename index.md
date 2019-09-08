@@ -27,6 +27,35 @@
 
 [Mobile Act](https://mobileact.connpass.com) is a study group on mobile application development started in Nagoya with colleagues in [Fenrir inc.](https://www.fenrir-inc.com) Nagoya branch.
 
+## Presentation
+
+### 2019
+
+- [iOSDC Japan 2019](https://iosdc.jp/2019) / Swift Playgrounds でタートルグラフィックスしよう！🐢 ( [Proposal@Fortree](https://fortee.jp/iosdc-japan-2019/proposal/3c2b7111-cdf3-43bb-81b8-446424b3f25c) ) ( [Slide@Speaker Deck](https://speakerdeck.com/temoki/swift-playgroundsdetatorugurahuitukususiyou) )
+- [Nagoya iOS meetup #6](https://nagoya-ios-meetup.connpass.com/event/141043/) / [創業事業のiOSアプリを一から作りなおしました](https://speakerdeck.com/temoki/chuang-ye-shi-ye-falseiosapuriwo-karazuo-rinaosimasita)
+
+### 2018
+
+- [Mobile Act NAGOYA #12](https://mobileact.connpass.com/event/97211/) / [WWDC2018でグッときたアレ](https://speakerdeck.com/temoki/wwdc2018degututokitaare)
+- [Nagoya iOS meetup #4](https://nagoya-ios-meetup.connpass.com/event/95974/) / [Xcode & fastlane で iOS アプリのスクショ撮影を自動化しよう！](https://speakerdeck.com/temoki/xcode-and-fastlane-de-ios-apurifalsesukusiyocuo-ying-wozi-dong-hua-siyou)
+- [Mobile Act NAGOYA #11](https://mobileact.connpass.com/event/90198/) / [今年の開発者イベントで僕がグッときたポイント](https://speakerdeck.com/temoki/jin-nian-falsekai-fa-zhe-ibentodepu-gagututokitapointo)
+- [Mobile Act NAGOYA #10](https://mobileact.connpass.com/event/83593/) / [I❤️TransporterPad](https://speakerdeck.com/temoki/i-transporterpad)
+- [Nagoya iOS Meetup #2](https://nagoya-ios-meetup.connpass.com/event/80322/) / [が静かにローンチしたアプリ配信プラットフォーム](https://speakerdeck.com/temoki/gajing-kanirontisitaapuripei-xin-puratutohuomu)
+- [Mobile Act NAGOYA #9](https://mobileact.connpass.com/event/77509/) / [Quartz Composer を iOS アプリ開発に活用する話](https://speakerdeck.com/temoki/quartzcomposerwoiosapurikai-fa-nihuo-yong-suru)
+
+### 2017
+
+- [Mobile Act NAGOYA #8](https://mobileact.connpass.com/event/69733/) / [ラズパイとHomeKitでおうちハック](https://speakerdeck.com/temoki/razupaitohomekitdeoutihatuku)
+- [Mobile Act NAGOYA #6](https://mobileactnagoya.connpass.com/event/58453/) / [モバイルプラットフォーマー主催のデベロッパー向けイベント特集🎉](https://speakerdeck.com/temoki/mobile-act-nagoya-number-6)
+- [Mobile Act NAGOYA #4](https://mobileactnagoya.connpass.com/event/48721/) / 年末年始の成果、そして現状の紹介
+
+### 2016
+
+- [NGK2016B](https://ngk2016b.connpass.com) / [名古屋でモバイルアプリ勉強会はじめました](https://speakerdeck.com/temoki/ming-gu-wu-demobairuapurimian-qiang-hui-hazimemasita)
+- [Mobile Act NAGOYA #3](https://mobileactnagoya.connpass.com/event/44624/) / [iOS のテキストレイアウトが難しい話](https://speakerdeck.com/temoki/ios-falsetekisutoreiautogamuzukasiihua)
+- [Mobile Act NAGOYA #2](https://mobileactnagoya.connpass.com/event/38805/) / [New iPhone Camera Hack!]()
+- [Mobile Act NAGOYA #1](https://mobileactnagoya.connpass.com/event/34626/) / [iOS アプリのデザイン実装レビューを効率化する](https://speakerdeck.com/temoki/ios-apurifalsedezainshi-zhuang-rebiyuwoxiao-lu-hua-suru)
+
 ## Works
 
 ### AR App for Reversible Destiny Yoro Park (2018)
@@ -83,12 +112,21 @@ I developed individually and sold it at the iOS App Store.
 
 ### [stmn, inc.](https://stmn.co.jp)
 
-- Software Engineer
-- Mobile app development of the company service [TUNAG](https://tunag.jp) that is social networking service for enterprise
+- iOS/Android App Engineer
+- iOS/Android app development of the company service [TUNAG](https://tunag.jp) that is social networking service for enterprise
 - Oct. 2018 -
 
-> - iOS, Xcode, Swift, Firebase, RxSwift, ...
-> - Android, Android Studio, Java, Kotlin, ...
+> - iOS, Xcode, Swift, CocoaPods, Carthage, Alamofire, Moya, ...
+> - Android, Android Studio, Kotlin, Gradle, OkHttp3, Retrofit2, Moshi, Koin, Picasso, ...
+> - Firebase, ReactiveX, Fastlane, ...
+
+#### Contents
+
+- [stmn.co.jp/tech](https://stmn.co.jp/tech/)
+  - [iOSDC Japan 2019 にスタメンのエンジニアが登壇します！](https://stmn.co.jp/tech/6336)
+  - [TUNAG iOSアプリの技術的な解説](https://stmn.co.jp/tech/4333)
+  - [TUNAG iOSアプリのチャット機能をVIPERアーキテクチャで開発した話](https://stmn.co.jp/tech/4037)
+  - [try! Swift 2019 Tokyo 1日目 に参加してきました！](https://stmn.co.jp/tech/3419)
 
 ### [Fenrir inc.](https://www.fenrir-inc.com)
 
