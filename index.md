@@ -125,15 +125,12 @@ I developed individually and sold it at the iOS App Store.
 #### Contents
 
 - [stmn.co.jp/tech](https://stmn.co.jp/tech/)
-  - [iOSDC Japan 2019 にスタメンのエンジニアが登壇します！](https://stmn.co.jp/tech/6336)
-  - [TUNAG iOSアプリの技術的な解説](https://stmn.co.jp/tech/4333)
-  - [TUNAG iOSアプリのチャット機能をVIPERアーキテクチャで開発した話](https://stmn.co.jp/tech/4037)
-  - [try! Swift 2019 Tokyo 1日目 に参加してきました！](https://stmn.co.jp/tech/3419)
-
-#### Contents
-
-- [TUNAG iOSアプリのチャット機能をVIPERアーキテクチャで開発した話](https://stmn.co.jp/tech/4037)
-- [try! Swift 2019 Tokyo 1日目 に参加してきました！](https://stmn.co.jp/tech/3419)
+    - [iOSDC Japan 2019 にスタメンのエンジニアが登壇します！](https://stmn.co.jp/tech/6336)
+    - [TUNAG iOSアプリの技術的な解説](https://stmn.co.jp/tech/4333)
+    - [TUNAG iOSアプリのチャット機能をVIPERアーキテクチャで開発した話](https://stmn.co.jp/tech/4037)
+    - [try! Swift 2019 Tokyo 1日目 に参加してきました！](https://stmn.co.jp/tech/3419)
+- [Wantedly / stmn, inc.](https://www.wantedly.com/companies/stmn_inc)
+    - [プロダクトを通して、美味しいケーキを食べた時の「幸せな感覚」を提供したい。](https://www.wantedly.com/companies/stmn_inc/post_articles/170261)
 
 ### [Fenrir inc.](https://www.fenrir-inc.com)
 
