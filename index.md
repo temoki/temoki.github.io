@@ -31,6 +31,7 @@
 
 ### 2019
 
+- [Mobile Act OSAKA #11](https://mobileact.connpass.com/event/141009/) / [Ruby on Rails + Cloud Firestore のハイブリッド構成で構築するリアルタイム・チャット機能](https://speakerdeck.com/temoki/ruby-on-rails-plus-cloud-firestore-falsehaiburitudogou-cheng-degou-zhu-sururiarutaimutiyatutoji-neng)
 - [iOSDC Japan 2019](https://iosdc.jp/2019) / Swift Playgrounds でタートルグラフィックスしよう！🐢 ( [Proposal@Fortree](https://fortee.jp/iosdc-japan-2019/proposal/3c2b7111-cdf3-43bb-81b8-446424b3f25c) ) ( [Slide@Speaker Deck](https://speakerdeck.com/temoki/swift-playgroundsdetatorugurahuitukususiyou) )
 - [Nagoya iOS meetup #6](https://nagoya-ios-meetup.connpass.com/event/141043/) / [創業事業のiOSアプリを一から作りなおしました](https://speakerdeck.com/temoki/chuang-ye-shi-ye-falseiosapuriwo-karazuo-rinaosimasita)
 
@@ -55,8 +56,13 @@
 - [Mobile Act NAGOYA #3](https://mobileactnagoya.connpass.com/event/44624/) / [iOS のテキストレイアウトが難しい話](https://speakerdeck.com/temoki/ios-falsetekisutoreiautogamuzukasiihua)
 - [Mobile Act NAGOYA #2](https://mobileactnagoya.connpass.com/event/38805/) / [New iPhone Camera Hack!]()
 - [Mobile Act NAGOYA #1](https://mobileactnagoya.connpass.com/event/34626/) / [iOS アプリのデザイン実装レビューを効率化する](https://speakerdeck.com/temoki/ios-apurifalsedezainshi-zhuang-rebiyuwoxiao-lu-hua-suru)
+- [デザイン会社が実践するチームコラボレーション Prott×Brushup共催セミナー](https://prott.connpass.com/event/35008/) / Prott活用事例
 
 ## Works
+
+### Location based AR (2019)
+
+> - Swift, ARKit, SceneKit
 
 ### Yoro Reversible Destiny AR (2018)
 
@@ -125,6 +131,8 @@ I developed individually and sold it at the iOS App Store.
 #### Contents
 
 - [stmn.co.jp/tech](https://stmn.co.jp/tech/)
+    - [モバイルアプリエンジニアによる最近の登壇レポート](https://stmn.co.jp/tech/6649)
+    - [iOSDC Japan 2019 で登壇して得たもの](https://stmn.co.jp/tech/6401)
     - [iOSDC Japan 2019 にスタメンのエンジニアが登壇します！](https://stmn.co.jp/tech/6336)
     - [TUNAG iOSアプリの技術的な解説](https://stmn.co.jp/tech/4333)
     - [TUNAG iOSアプリのチャット機能をVIPERアーキテクチャで開発した話](https://stmn.co.jp/tech/4037)
