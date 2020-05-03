@@ -60,14 +60,13 @@
 
 ## Works
 
-### Munro (2019~)
+### Munro books (2019~)
 
-(Now Developing)
+[Munro books](https://munro.hiraku.space) is an iOS application to find picture books with a Pinterest-like UI.
 
-It is an iOS application to find picture books with a Pinterest-like UI.
-
-> - Swift, Firebase
-> - Python, SQLite, Keras
+> - Swift, SwiftUI, Combine, Firebase
+> - Python, Keras, SQLite 
+> - Rakuten Developers API
 
 ### Location based AR (2019)
 
@@ -140,6 +139,7 @@ I developed individually and sold it at the iOS App Store.
 #### Contents
 
 - [stmn.co.jp/tech](https://stmn.co.jp/tech/)
+    - [モバイルアプリ開発のCI/CDにBitriseを採用した理由](https://stmn.co.jp/tech/7985)
     - [スタメンのバースデーイベント「誕生祭」レポート（プロダクト部編）](https://stmn.co.jp/tech/7294)
     - [モバイルアプリエンジニアによる最近の登壇レポート](https://stmn.co.jp/tech/6649)
     - [iOSDC Japan 2019 で登壇して得たもの](https://stmn.co.jp/tech/6401)
