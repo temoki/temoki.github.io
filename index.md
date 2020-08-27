@@ -7,15 +7,19 @@
 
 <img src="assets/AppleTeacherSwiftPlaygrounds_black.svg" width="160">
 
-### SNS
+### Stats
+[![GitHub](https://img.shields.io/github/followers/temoki?style=social)](https://github.com/temoki)
+[![Twitter](https://img.shields.io/twitter/follow/temoki?style=social)](https://twitter.com/temoki)
 
-- [Twitter](https://twitter.com/temoki)
-- [Facebook](https://www.facebook.com/temoki.kobayashi)
-- [Instagram](https://www.instagram.com/temoki)
-- [Qiita](https://qiita.com/temoki)
-- [Speaker Deck](https://speakerdeck.com/temoki)
-- [Pinterest](https://www.pinterest.jp/temoki)
-- [Medium](https://medium.com/@temoki)
+[![My Qiita posts](https://qiita-badge.apiapi.app/s/temoki/posts.svg)](http://qiita.com/temoki)
+[![My Qiita contributions](https://qiita-badge.apiapi.app/s/temoki/contributions.svg)](http://qiita.com/temoki)
+[![My Qiita followers](https://qiita-badge.apiapi.app/s/temoki/followers.svg)](http://qiita.com/temoki)
+
+[![GitHub/Stats](https://github-readme-stats.vercel.app/api?username=temoki&show_icons=true&count_private=true&hide=contribs)](https://github.com/temoki)
+
+<!-- [![GitHub//TopLangs](https://github-readme-stats.vercel.app/api/top-langs/?username=temoki&layout=compact&count_private=true)](https://github.com/temoki) -->
+
+| [👤 Facebook](https://www.facebook.com/temoki.kobayashi) | [🎤 Speaker Deck](https://speakerdeck.com/temoki) | [📌 Pinterest](https://www.pinterest.jp/temoki) | [Ⓜ️ Medium](https://medium.com/@temoki) | [📖 note](https://note.com/temoki) |
 
 ## Community
 
