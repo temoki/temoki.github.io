@@ -15,11 +15,11 @@
 [![My Qiita contributions](https://qiita-badge.apiapi.app/s/temoki/contributions.svg)](http://qiita.com/temoki)
 [![My Qiita followers](https://qiita-badge.apiapi.app/s/temoki/followers.svg)](http://qiita.com/temoki)
 
-[![GitHub/Stats](https://github-readme-stats.vercel.app/api?username=temoki&show_icons=true&count_private=true&hide=contribs)](https://github.com/temoki)
-
+<!-- [![GitHub/Stats](https://github-readme-stats.vercel.app/api?username=temoki&show_icons=true&count_private=true&hide=contribs)](https://github.com/temoki) -->
 <!-- [![GitHub//TopLangs](https://github-readme-stats.vercel.app/api/top-langs/?username=temoki&layout=compact&count_private=true)](https://github.com/temoki) -->
+[![GitHub/Trophy](https://github-profile-trophy.vercel.app/?username=temoki)](https://github.com/temoki/github-profile-trophy)
 
-| [👤 Facebook](https://www.facebook.com/temoki.kobayashi) | [🎤 Speaker Deck](https://speakerdeck.com/temoki) | [📌 Pinterest](https://www.pinterest.jp/temoki) | [Ⓜ️ Medium](https://medium.com/@temoki) | [📖 note](https://note.com/temoki) |
+/ [👤 Facebook](https://www.facebook.com/temoki.kobayashi) / [🎤 Speaker Deck](https://speakerdeck.com/temoki) / [📌 Pinterest](https://www.pinterest.jp/temoki) / [Ⓜ️ Medium](https://medium.com/@temoki) / [📖 note](https://note.com/temoki) /
 
 ## Community
 
