@@ -33,6 +33,10 @@
 
 ## Presentation
 
+### 2020
+
+- [なごデLT Vol.3.5](https://twitter.com/search?q=(%23なごデLT)%20until%3A2020-06-30%20since%3A2020-06-01&src=typed_query&f=live) / Apple HIG のススメ
+
 ### 2019
 
 - [Mobile Act OSAKA #11](https://mobileact.connpass.com/event/141009/) / [Ruby on Rails + Cloud Firestore のハイブリッド構成で構築するリアルタイム・チャット機能](https://speakerdeck.com/temoki/ruby-on-rails-plus-cloud-firestore-falsehaiburitudogou-cheng-degou-zhu-sururiarutaimutiyatutoji-neng)
@@ -63,6 +67,13 @@
 - [デザイン会社が実践するチームコラボレーション Prott×Brushup共催セミナー](https://prott.connpass.com/event/35008/) / Prott活用事例
 
 ## Works
+
+### ぺらり/Perali (2020~)
+
+[ぺらり/Perali](https://perali.hiraku.space/#/) is an iOS application to find picture books with a Pinterest-like UI.
+
+> - Flutter, Dart, Firebase 
+> - OpenBD, SQLite
 
 ### Munro books (2019~)
 
@@ -136,21 +147,22 @@ I developed individually and sold it at the iOS App Store.
 - iOS/Android app development of the company service [TUNAG](https://tunag.jp) that is social networking service for enterprise
 - Oct. 2018 -
 
-> - iOS, Xcode, Swift, CocoaPods, Carthage, Alamofire, Moya, ...
+> - iOS, Xcode, SwiftPM, Swift, CocoaPods, Carthage, Alamofire, Moya, ...
 > - Android, Android Studio, Kotlin, Gradle, OkHttp3, Retrofit2, Moshi, Koin, Picasso, ...
 > - Firebase, ReactiveX, Fastlane, GitHub Actions, ...
 
 #### Contents
 
-- [stmn.co.jp/tech](https://stmn.co.jp/tech/)
-    - [モバイルアプリ開発のCI/CDにBitriseを採用した理由](https://stmn.co.jp/tech/7985)
-    - [スタメンのバースデーイベント「誕生祭」レポート（プロダクト部編）](https://stmn.co.jp/tech/7294)
-    - [モバイルアプリエンジニアによる最近の登壇レポート](https://stmn.co.jp/tech/6649)
-    - [iOSDC Japan 2019 で登壇して得たもの](https://stmn.co.jp/tech/6401)
-    - [iOSDC Japan 2019 にスタメンのエンジニアが登壇します！](https://stmn.co.jp/tech/6336)
-    - [TUNAG iOSアプリの技術的な解説](https://stmn.co.jp/tech/4333)
-    - [TUNAG iOSアプリのチャット機能をVIPERアーキテクチャで開発した話](https://stmn.co.jp/tech/4037)
-    - [try! Swift 2019 Tokyo 1日目 に参加してきました！](https://stmn.co.jp/tech/3419)
+- [stmn, inc Tech Blog](https://tech.stmn.co.jp)
+    - [iOSアプリ開発においてSwiftのErrorを巧く活用するには](https://tech.stmn.co.jp/entry/2020/07/21/105839)
+    - [モバイルアプリ開発のCI/CDにBitriseを採用した理由](https://tech.stmn.co.jp/entry/2020/03/31/110000)
+    - [スタメンのバースデーイベント「誕生祭」レポート（プロダクト部編）](https://tech.stmn.co.jp/entry/tech/7294)
+    - [モバイルアプリエンジニアによる最近の登壇レポート](https://tech.stmn.co.jp/entry/tech/6649)
+    - [iOSDC Japan 2019 で登壇して得たもの](https://tech.stmn.co.jp/entry/tech/6401)
+    - [iOSDC Japan 2019 にスタメンのエンジニアが登壇します！](https://tech.stmn.co.jp/entry/tech/6336)
+    - [TUNAG iOSアプリの技術的な解説](https://tech.stmn.co.jp/entry/tech/4333)
+    - [TUNAG iOSアプリのチャット機能をVIPERアーキテクチャで開発した話](https://tech.stmn.co.jp/entry/tech/4037)
+    - [try! Swift 2019 Tokyo 1日目 に参加してきました！](https://tech.stmn.co.jp/entry/tech/3419)
 - [Wantedly / stmn, inc.](https://www.wantedly.com/companies/stmn_inc)
     - [プロダクトを通して、美味しいケーキを食べた時の「幸せな感覚」を提供したい。](https://www.wantedly.com/companies/stmn_inc/post_articles/170261)
 
@@ -178,4 +190,4 @@ I developed individually and sold it at the iOS App Store.
 - 3D CAD/CAE Software for the car modeling
 - Apr. 2005 ~ Dec. 2014
 
-> - Windows XP/7, C/C++, OpenGL, OpenMP, ...
+> - Windows XP/7, C/C++, STL, OpenGL, OpenMP, ...
