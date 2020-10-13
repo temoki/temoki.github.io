@@ -21,16 +21,6 @@
 
 / [👤 Facebook](https://www.facebook.com/temoki.kobayashi) / [🎤 Speaker Deck](https://speakerdeck.com/temoki) / [📌 Pinterest](https://www.pinterest.jp/temoki) / [Ⓜ️ Medium](https://medium.com/@temoki) / [📖 note](https://note.com/temoki) /
 
-## Community
-
-### Nagoya iOS meetup
-
-[Nagoya iOS meetup](https://nagoya-ios-meetup.connpass.com) is a study group on iOS application development started in Nagoya with engineers in [Yahoo Japan Corp](https://about.yahoo.co.jp).
-
-### Mobile Act
-
-[Mobile Act](https://mobileact.connpass.com) is a study group on mobile application development started in Nagoya with colleagues in [Fenrir inc.](https://www.fenrir-inc.com) Nagoya branch.
-
 ## Presentation
 
 ### 2020
@@ -70,7 +60,7 @@
 
 ### ぺらり/Perali (2020~)
 
-[ぺらり/Perali](https://perali.hiraku.space/#/) is an iOS application to find picture books with a Pinterest-like UI.
+[ぺらり/Perali](https://perali.hiraku.space/#/) is an web application to find picture books with a Pinterest-like UI.
 
 > - Flutter, Dart, Firebase 
 > - OpenBD, SQLite
@@ -154,6 +144,7 @@ I developed individually and sold it at the iOS App Store.
 #### Contents
 
 - [stmn, inc Tech Blog](https://tech.stmn.co.jp)
+    - [プロジェクトマネジメント入門以前](https://tech.stmn.co.jp/entry/2020/10/08/154134)
     - [iOSアプリ開発においてSwiftのErrorを巧く活用するには](https://tech.stmn.co.jp/entry/2020/07/21/105839)
     - [モバイルアプリ開発のCI/CDにBitriseを採用した理由](https://tech.stmn.co.jp/entry/2020/03/31/110000)
     - [スタメンのバースデーイベント「誕生祭」レポート（プロダクト部編）](https://tech.stmn.co.jp/entry/tech/7294)
@@ -191,3 +182,13 @@ I developed individually and sold it at the iOS App Store.
 - Apr. 2005 ~ Dec. 2014
 
 > - Windows XP/7, C/C++, STL, OpenGL, OpenMP, ...
+
+## Community
+
+### Nagoya iOS meetup
+
+[Nagoya iOS meetup](https://nagoya-ios-meetup.connpass.com) is a study group on iOS application development started in Nagoya with engineers in [Yahoo Japan Corp](https://about.yahoo.co.jp).
+
+### Mobile Act
+
+[Mobile Act](https://mobileact.connpass.com) is a study group on mobile application development started in Nagoya with colleagues in [Fenrir inc.](https://www.fenrir-inc.com) Nagoya branch.
