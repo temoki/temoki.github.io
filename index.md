@@ -25,7 +25,7 @@
 
 ### 2020
 
-- [なごデLT Vol.3.5](https://twitter.com/search?q=(%23なごデLT)%20until%3A2020-06-30%20since%3A2020-06-01&src=typed_query&f=live) / Apple HIG のススメ
+- [なごデLT Vol.3.5](https://twitter.com/search?q=(%23なごデLT)%20until%3A2020-06-30%20since%3A2020-06-01&src=typed_query) / Apple HIG のススメ
 
 ### 2019
 
