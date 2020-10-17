@@ -25,6 +25,7 @@
 
 ### 2020
 
+- [GDG DevFest 2020](https://tokyo.gdgjapan.org/devfest2020/schedule/1/127) / [モバイルアプリエンジニアも簡単にウェブアプリを作れるよ！そう、Flutterならね。](https://speakerdeck.com/temoki/mobairuapurienziniamojian-dan-niuebuapuriwozuo-reruyo-sou-flutternarane)
 - [なごデLT Vol.3.5](https://twitter.com/search?q=(%23なごデLT)%20until%3A2020-06-30%20since%3A2020-06-01&src=typed_query) / Apple HIG のススメ
 
 ### 2019
