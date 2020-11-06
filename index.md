@@ -64,7 +64,7 @@
 [ぺらり/Perali](https://perali.hiraku.space/#/) is an web application to find picture books with a Pinterest-like UI.
 
 > - Flutter, Dart, Firebase 
-> - OpenBD, SQLite
+> - OpenBD, LIRE, SQLite
 
 ### Munro books (2019~)
 
@@ -145,6 +145,7 @@ I developed individually and sold it at the iOS App Store.
 #### Contents
 
 - [stmn, inc Tech Blog](https://tech.stmn.co.jp)
+    - [プロジェクトマネジメント入門ちょっとだけ](https://tech.stmn.co.jp/entry/2020/11/06/110000)
     - [プロジェクトマネジメント入門以前](https://tech.stmn.co.jp/entry/2020/10/08/154134)
     - [iOSアプリ開発においてSwiftのErrorを巧く活用するには](https://tech.stmn.co.jp/entry/2020/07/21/105839)
     - [モバイルアプリ開発のCI/CDにBitriseを採用した理由](https://tech.stmn.co.jp/entry/2020/03/31/110000)
