@@ -59,9 +59,9 @@
 
 ## Works
 
-### ぺらり/Perali (2020~)
+### Perali (2020~)
 
-[ぺらり/Perali](https://perali.hiraku.space/#/) is an web application to find picture books with a Pinterest-like UI.
+[Perali](https://perali.hiraku.space/) is an web application to find picture books with a Pinterest-like UI.
 
 > - Flutter, Dart, Firebase 
 > - OpenBD, LIRE, SQLite
@@ -74,7 +74,9 @@
 > - Python, Keras, SQLite 
 > - Rakuten Developers API
 
-### Location based AR (2019)
+### Location-based AR app (2019)
+
+It is an AR iOS application that can be used in a certain tourist destination. 
 
 > - Swift, ARKit, SceneKit
 
