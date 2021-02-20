@@ -2,7 +2,7 @@
 
 - Tomoki Kobayashi
 - Gifu, Japan 🇯🇵
-- iOS/Android App Developer 📱
+- iOS/Android/Flutter/Firebase App Developer 📱
 - Loves 👪 🍎 📱 📷 👓 🍛 🐢 🚗 🚴 ...
 
 <img src="assets/AppleTeacherSwiftPlaygrounds_black.svg" width="160">
