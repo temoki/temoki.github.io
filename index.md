@@ -19,9 +19,13 @@
 <!-- [![GitHub//TopLangs](https://github-readme-stats.vercel.app/api/top-langs/?username=temoki&layout=compact&count_private=true)](https://github.com/temoki) -->
 [![GitHub/Trophy](https://github-profile-trophy.vercel.app/?username=temoki)](https://github.com/temoki/github-profile-trophy)
 
-/ [👤 Facebook](https://www.facebook.com/temoki.kobayashi) / [🎤 Speaker Deck](https://speakerdeck.com/temoki) / [📌 Pinterest](https://www.pinterest.jp/temoki) / [Ⓜ️ Medium](https://medium.com/@temoki) / [📖 note](https://note.com/temoki) /
+/ [👤 Facebook](https://www.facebook.com/temoki.kobayashi) / [🎤 Speaker Deck](https://speakerdeck.com/temoki) / [📌 Pinterest](https://www.pinterest.jp/temoki) / [📖 note](https://note.com/temoki) /
 
 ## Presentation
+
+### 2021
+
+- [Mobile Act ONLINE #3](https://mobileact.connpass.com/event/200515/) / [iOSパッケージマネージャー奮闘記](https://speakerdeck.com/temoki/iospatukezimaneziyafen-dou-ji)
 
 ### 2020
 
