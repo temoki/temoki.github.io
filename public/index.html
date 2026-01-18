@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>temoki | Portfolio Dashboard</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#007AFF",
+            "background-light": "#F2F2F7",
+            "card-light": "#FFFFFF",
+            "secondary-card": "#FBFBFD",
+          },
+          fontFamily: {
+            "sans": ["Inter", "-apple-system", "BlinkMacSystemFont", "SF Pro Display", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "2xl": "1.75rem",
+            "3xl": "2.25rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    body {
+      -webkit-font-smoothing: antialiased;
+      background-color: #F2F2F7;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: minmax(160px, auto);
+      gap: 16px;
+    }
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+    .apple-shadow {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .section-header-container {
+      @apply flex items-center gap-2 mb-4 ml-1;
+    }
+    .section-header {
+      @apply text-[11px] font-bold text-gray-400 tracking-widest;
+    }
+    .section-icon {
+      @apply text-gray-400 text-[14px];
+    }
+    .portfolio-section {
+      @apply mb-16;
+    }
+    /* Profile card */
+    .profile-card {
+      @apply col-span-2 md:col-span-4 row-span-2 bg-card-light p-8 rounded-3xl
+             flex flex-col justify-between relative overflow-hidden;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    }
+    .profile-card-content {
+      @apply relative z-10;
+    }
+    .profile-card-avatar {
+      @apply size-24 rounded-full bg-cover bg-center mb-6 border-[3px] border-gray-50 shadow-sm;
+    }
+    .profile-card-username {
+      @apply text-3xl font-bold tracking-tight mb-2;
+    }
+    .profile-card-info {
+      @apply flex items-center gap-2 mb-3;
+    }
+    .profile-card-name {
+      @apply text-lg text-gray-600 font-medium;
+    }
+    .profile-card-location {
+      @apply text-base text-gray-400 font-medium;
+    }
+    .profile-card-bio {
+      @apply text-gray-500 font-medium leading-relaxed;
+    }
+    /* Social card */
+    .social-card {
+      @apply col-span-1 row-span-1 bg-card-light p-5 rounded-3xl
+             flex flex-col items-start justify-center active:scale-95 transition-all duration-200;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    }
+    .social-card:hover {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+      transform: translateY(-4px);
+    }
+    /* Portfolio card */
+    .portfolio-card {
+      @apply col-span-2 row-span-1 bg-card-light rounded-3xl
+             overflow-hidden flex active:scale-[0.98] transition-all duration-200;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    }
+    .portfolio-card:hover {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+      transform: translateY(-4px);
+    }
+    .portfolio-card-content {
+      @apply w-1/2 p-6 flex flex-col justify-start;
+    }
+    .portfolio-card-image {
+      @apply w-1/2 py-4 pr-4 flex items-center justify-center;
+    }
+    .portfolio-card-image-bg {
+      @apply w-full h-full bg-cover bg-center rounded-2xl border border-black/5;
+    }
+    .portfolio-card-category {
+      @apply text-[10px] mb-1 tracking-widest;
+    }
+    .portfolio-card-category-name {
+      @apply font-bold text-primary;
+    }
+    .portfolio-card-category-year {
+      @apply font-normal text-gray-400;
+    }
+    .portfolio-card-title {
+      @apply text-sm font-bold leading-tight;
+    }
+    .portfolio-card-tags {
+      @apply flex flex-wrap gap-1.5 mt-3;
+    }
+    .portfolio-card-tag {
+      @apply px-2 py-0.5 text-[10px] font-semibold text-gray-500 bg-gray-100 rounded-full;
+    }
+    /* Social card children */
+    .social-card-icon {
+      @apply w-7 h-7;
+    }
+    .social-card-domain {
+      @apply text-xs text-gray-400 mt-3;
+    }
+    .social-card-username {
+      @apply text-sm font-semibold text-gray-700;
+    }
+    /* Footer */
+    .footer {
+      @apply text-center pb-8;
+    }
+    .footer-text {
+      @apply text-[11px] font-bold text-gray-400 tracking-[0.2em];
+    }
+    .footer-credit {
+      @apply text-xs text-gray-400 mb-3;
+    }
+    .footer-credit a {
+      @apply text-gray-500 hover:text-gray-600 underline underline-offset-2 transition-colors;
+    }
+  </style>
+  <style>
+    body {
+      min-height: 100dvh;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="text-[#1D1D1F] transition-colors duration-300">
+  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+    <div class="absolute top-[-5%] left-[-10%] size-[400px] bg-blue-400/10 rounded-full blur-[100px]"></div>
+    <div class="absolute bottom-[10%] right-[-5%] size-[350px] bg-indigo-400/10 rounded-full blur-[80px]"></div>
+  </div>
+  <main class="max-w-md md:max-w-3xl mx-auto px-4 pt-16 pb-20">
+    <section class="portfolio-section" id="profile">
+      <div class="grid">
+        <div class="profile-card">
+          <div class="profile-card-content">
+            <div class="profile-card-avatar" style='background-image: url("assets/profile.jpg");'></div>
+            <h1 class="profile-card-username">@temoki</h1>
+            <div class="profile-card-info">
+              <p class="profile-card-name">Tomoki Kobayashi</p>
+              <span class="profile-card-location">Gifu, JP 🇯🇵</span>
+            </div>
+            <p class="profile-card-bio">Software Developer / iOS, Flutter, Android<br/>I Love 👨👩👦 📱 📷 🚘🔋 🚴‍♂️ ☕️ 🍜 🍛.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio-section" id="socials">
+      <div class="section-header-container">
+        <span class="material-symbols-outlined section-icon">share</span>
+        <h2 class="section-header">SOCIALS</h2>
+      </div>
+      <div class="grid">
+        <a class="social-card" href="https://x.com/temoki" target="_blank">
+          <img class="social-card-icon rounded-[6px]" src="https://www.google.com/s2/favicons?domain=x.com&sz=64" alt="X">
+          <span class="social-card-domain">x.com</span>
+          <span class="social-card-username">@temoki</span>
+        </a>
+        <a class="social-card" href="https://github.com/temoki" target="_blank">
+          <img class="social-card-icon" src="https://www.google.com/s2/favicons?domain=github.com&sz=64" alt="GitHub">
+          <span class="social-card-domain">github.com</span>
+          <span class="social-card-username">@temoki</span>
+        </a>
+        <a class="social-card" href="https://facebook.com/temoki.kobayashi" target="_blank">
+          <img class="social-card-icon" src="https://www.google.com/s2/favicons?domain=facebook.com&sz=64" alt="Facebook">
+          <span class="social-card-domain">facebook.com</span>
+          <span class="social-card-username">@temoki.kobayashi</span>
+        </a>
+        <a class="social-card" href="https://instagram.com/temoki" target="_blank">
+          <img class="social-card-icon" src="https://www.google.com/s2/favicons?domain=instagram.com&sz=64" alt="Instagram">
+          <span class="social-card-domain">instagram.com</span>
+          <span class="social-card-username">@temoki</span>
+        </a>
+        <a class="social-card" href="https://www.figma.com/@temoki" target="_blank">
+          <img class="social-card-icon" src="https://www.google.com/s2/favicons?domain=figma.com&sz=64" alt="Figma">
+          <span class="social-card-domain">figma.com</span>
+          <span class="social-card-username">@temoki</span>
+        </a>
+        <a class="social-card" href="https://note.com/temoki" target="_blank">
+          <img class="social-card-icon" src="https://www.google.com/s2/favicons?domain=note.com&sz=64" alt="note">
+          <span class="social-card-domain">note.com</span>
+          <span class="social-card-username">@temoki</span>
+        </a>
+        <a class="social-card" href="https://speakerdeck.com/temoki" target="_blank">
+          <img class="social-card-icon" src="https://www.google.com/s2/favicons?domain=speakerdeck.com&sz=64" alt="Speakerdeck">
+          <span class="social-card-domain">speakerdeck.com</span>
+          <span class="social-card-username">@temoki</span>
+        </a>
+        <a class="social-card" href="https://qiita.com/temoki" target="_blank">
+          <img class="social-card-icon" src="https://www.google.com/s2/favicons?domain=qiita.com&sz=64" alt="Qiita">
+          <span class="social-card-domain">qiita.com</span>
+          <span class="social-card-username">@temoki</span>
+        </a>
+      </div>
+    </section>
+    <section class="portfolio-section" id="products">
+      <div class="section-header-container">
+        <span class="material-symbols-outlined section-icon">apps</span>
+        <h2 class="section-header">Products</h2>
+      </div>
+      <div class="grid">
+        <a class="portfolio-card" href="https://note.com/temoki/n/n0a8d67b8d4ac" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">iOS/iPadOS App</span> <span class="portfolio-card-category-year">(2025)</span></p>
+            <h3 class="portfolio-card-title">FFFrame</h3>
+            <div class="portfolio-card-tags">
+              <span class="portfolio-card-tag">SwiftUI</span>
+              <span class="portfolio-card-tag">Liquid Glass</span>
+              <span class="portfolio-card-tag">Photos</span>
+            </div>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://assets.st-note.com/production/uploads/images/228988449/rectangle_large_type_2_6bd541fe04ac1360e1937f60b0afdbc5.jpg?fit=bounds&amp;quality=85&amp;width=1280");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://note.com/temoki/n/nef5c2c49d387" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">Flutter DevTools</span> <span class="portfolio-card-category-year">(2024)</span></p>
+            <h3 class="portfolio-card-title">gql_cache_lens</h3>
+            <div class="portfolio-card-tags">
+              <span class="portfolio-card-tag">Dart</span>
+              <span class="portfolio-card-tag">GraphQL</span>
+            </div>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://assets.st-note.com/production/uploads/images/244838549/rectangle_large_type_2_34af93cac3066811a6c26de148168ea2.png?fit=bounds&amp;quality=85&amp;width=1280");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://note.com/temoki/n/n85201aad326f" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">visionOS App</span> <span class="portfolio-card-category-year">(2024)</span></p>
+            <h3 class="portfolio-card-title">Reversible Destiny-Yoro</h3>
+            <div class="portfolio-card-tags">
+              <span class="portfolio-card-tag">SwiftUI</span>
+              <span class="portfolio-card-tag">ARKit</span>
+              <span class="portfolio-card-tag">RealityKit</span>
+            </div>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://assets.st-note.com/production/uploads/images/129608085/rectangle_large_type_2_0028edec5f8a9c299ba71be5da9a1129.jpg?fit=bounds&amp;quality=85&amp;width=1280");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://note.com/temoki/n/n9f9f0a04efb5" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">iOS/iPadOS App</span> <span class="portfolio-card-category-year">(2022)</span></p>
+            <h3 class="portfolio-card-title">Real Halftone 2</h3>
+            <div class="portfolio-card-tags">
+              <span class="portfolio-card-tag">SwiftUI</span>
+              <span class="portfolio-card-tag">CoreImage</span>
+              <span class="portfolio-card-tag">Metal</span>
+            </div>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://assets.st-note.com/production/uploads/images/104229603/rectangle_large_type_2_79ac0381d2920a0a17fee5e4e5bf68c8.png?fit=bounds&amp;quality=85&amp;width=1280");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://note.com/temoki/n/n6405a2d9c3e4" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">Figma Plugin</span> <span class="portfolio-card-category-year">(2022)</span></p>
+            <h3 class="portfolio-card-title">Awesome Icon Label Writer</h3>
+            <div class="portfolio-card-tags">
+              <span class="portfolio-card-tag">Figma</span>
+              <span class="portfolio-card-tag">TypeScript</span>
+            </div>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://assets.st-note.com/production/uploads/images/104230240/rectangle_large_type_2_d1bf50c1aa5ac7fd1c0e86ad49e2925d.png?fit=bounds&amp;quality=85&amp;width=1280");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://note.com/temoki/n/nfcff1e36c9df" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">iOS/Android App</span> <span class="portfolio-card-category-year">(2020)</span></p>
+            <h3 class="portfolio-card-title">ぺらり</h3>
+            <div class="portfolio-card-tags">
+              <span class="portfolio-card-tag">Flutter</span>
+              <span class="portfolio-card-tag">Firebase</span>
+              <span class="portfolio-card-tag">Algolia</span>
+              <span class="portfolio-card-tag">OpenBD</span>
+            </div>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://assets.st-note.com/production/uploads/images/104230449/rectangle_large_type_2_ff25eaf1443b41ebc527815438b56941.png?fit=bounds&amp;quality=85&amp;width=1280");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://note.com/temoki/n/nc184aef942e6" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">iPadOS App</span> <span class="portfolio-card-category-year">(2018)</span></p>
+            <h3 class="portfolio-card-title">養老天命反転AR</h3>
+            <div class="portfolio-card-tags">
+              <span class="portfolio-card-tag">SwiftUI</span>
+              <span class="portfolio-card-tag">ARKit</span>
+              <span class="portfolio-card-tag">CoreLocation</span>
+            </div>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://assets.st-note.com/production/uploads/images/104231330/rectangle_large_type_2_8299efebbd213a359ae73ff12c4005d0.png?fit=bounds&amp;quality=85&amp;width=1280");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://note.com/temoki/n/n437a7df8073e" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">iOS App</span> <span class="portfolio-card-category-year">(2015)</span></p>
+            <h3 class="portfolio-card-title">ドキドキ❤️メガネ</h3>
+            <div class="portfolio-card-tags">
+              <span class="portfolio-card-tag">Swift</span>
+              <span class="portfolio-card-tag">CoreBluetooth</span>
+              <span class="portfolio-card-tag">雰囲気メガネSDK</span>
+            </div>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://assets.st-note.com/production/uploads/images/104262430/rectangle_large_type_2_1afcc2a8ef7009f48415b932eb6194e9.png?fit=bounds&amp;quality=85&amp;width=1280");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://note.com/temoki/n/na3ac4f2b1c10" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">Swift Playgrounds Book</span> <span class="portfolio-card-category-year">(2017)</span></p>
+            <h3 class="portfolio-card-title">Tortoise Graphics</h3>
+            <div class="portfolio-card-tags">
+              <span class="portfolio-card-tag">Swift Playgrounds</span>
+              <span class="portfolio-card-tag">CoreGraphics</span>
+            </div>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://assets.st-note.com/production/uploads/images/104262358/rectangle_large_type_2_f63ce8a7c4281313143a2a37d68f6835.png?fit=bounds&amp;quality=85&amp;width=1280");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://www.youtube.com/playlist?list=PLQ-bgXtHVsheU6iBlRLeWO3aKnv5HXeXl" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">iOS App</span> <span class="portfolio-card-category-year">(2011)</span></p>
+            <h3 class="portfolio-card-title">Real Halftone</h3>
+            <div class="portfolio-card-tags">
+              <span class="portfolio-card-tag">Objective-C</span>
+              <span class="portfolio-card-tag">C++</span>
+              <span class="portfolio-card-tag">UIKit</span>
+              <span class="portfolio-card-tag">CoreGraphics</span>
+            </div>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://i.ytimg.com/vi/in_h5WtpUYE/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&amp;rs=AOn4CLDmvcCmhgFSKfONNSMLSctXnMupmA&amp;days_since_epoch=20471");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://note.com/temoki/n/n3ec67925a0fd" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">iOS App</span> <span class="portfolio-card-category-year">(2009)</span></p>
+            <h3 class="portfolio-card-title">Slow Shutter</h3>
+            <div class="portfolio-card-tags">
+              <span class="portfolio-card-tag">Objective-C</span>
+              <span class="portfolio-card-tag">C++</span>
+              <span class="portfolio-card-tag">UIKit</span>
+              <span class="portfolio-card-tag">CoreGraphics</span>
+              <span class="portfolio-card-tag">neon</span>
+            </div>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://assets.st-note.com/production/uploads/images/104263245/rectangle_large_type_2_bc8e9d822cd260e96736978c1ffd57ab.png?fit=bounds&amp;quality=85&amp;width=1280");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://note.com/temoki/n/ne16a2318afc0" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">iOS App</span> <span class="portfolio-card-category-year">(2009)</span></p>
+            <h3 class="portfolio-card-title">PICT.Edge</h3>
+            <div class="portfolio-card-tags">
+              <span class="portfolio-card-tag">Objective-C</span>
+              <span class="portfolio-card-tag">C++</span>
+              <span class="portfolio-card-tag">UIKit</span>
+              <span class="portfolio-card-tag">CoreGraphics</span>
+              <span class="portfolio-card-tag">neon</span>
+            </div>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://assets.st-note.com/production/uploads/images/104263445/rectangle_large_type_2_9a60bd88030e81f0498d72bbc484e5c3.png?fit=bounds&amp;quality=85&amp;width=1280");'></div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="portfolio-section" id="presentations">
+      <div class="section-header-container">
+        <span class="material-symbols-outlined section-icon">transition_slide</span>
+        <h2 class="section-header">Presentations</h2>
+      </div>
+      <div class="grid">
+        <a class="portfolio-card" href="https://speakerdeck.com/temoki/rubyxiosapurikai-fa-gong-nibu-ndaekosisutemunowu-yu" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">ながらRuby会議01</span> <span class="portfolio-card-category-year">(2025)</span></p>
+            <h3 class="portfolio-card-title">Ruby × iOSアプリ開発：共に歩んだエコシステムの物語</h3>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://files.speakerdeck.com/presentations/33a42ff801e746cda53366a30678b197/slide_0.jpg?36490468");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://speakerdeck.com/temoki/shi-ye-rang-du-woshou-ketaapuritonotong-he-deshi-bai-sositeyuzakaranoping-jia-hui-fu-nizhi-rumade" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">ENECHANGE合同勉強会</span> <span class="portfolio-card-category-year">(2023)</span></p>
+            <h3 class="portfolio-card-title">事業譲渡を受けたアプリとの統合で失敗、 そしてユーザーからの評価回復に至るまで</h3>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://files.speakerdeck.com/presentations/033c77a268ca477d876ce12dd5f47bcc/slide_0.jpg?28313526");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://fortee.jp/iosdc-japan-2019/proposal/3c2b7111-cdf3-43bb-81b8-446424b3f25c" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">iOSDC Japan</span> <span class="portfolio-card-category-year">(2019)</span></p>
+            <h3 class="portfolio-card-title">Swift Playgrounds でタートルグラフィックスしよう！🐢</h3>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://files.speakerdeck.com/presentations/02fcd6b2739c4a40bf2016a10e4790d3/slide_0.jpg?13509625");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://speakerdeck.com/temoki/rubyxiosapurikai-fa-gong-nibu-ndaekosisutemunowu-yu" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">その他</span> <span class="portfolio-card-category-year">(2016-)</span></p>
+            <h3 class="portfolio-card-title">社外の勉強会やイベントでの登壇まとめ</h3>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://assets.st-note.com/production/uploads/images/124115868/rectangle_large_type_2_bede5c7eda51eb6708fa8f64624d6c83.png?fit=bounds&amp;quality=85&amp;width=1280");'></div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="portfolio-section" id="writings">
+      <div class="section-header-container">
+        <span class="material-symbols-outlined section-icon">article</span>
+        <h2 class="section-header">Writings</h2>
+      </div>
+      <div class="grid">
+        <a class="portfolio-card" href="https://note.com/temoki/m/m300f5d8c59a6" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">EVW</span> <span class="portfolio-card-category-year">(noteマガジン)</span></p>
+            <h3 class="portfolio-card-title">フォルクスワーゲンID.4や電気自動車についての語るマガジン</h3>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://assets.st-note.com/production/uploads/images/93492038/7309a5de7e080aaef243ccddf073d141.png?fit=bounds&amp;format=jpeg&amp;height=1024&amp;quality=85&amp;width=1024");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://note.com/temoki/m/m09b9e41ad18b" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">FJP</span> <span class="portfolio-card-category-year">(noteマガジン)</span></p>
+            <h3 class="portfolio-card-title">FUJIFILMのカメラで写真を撮ることに関して綴るマガジン</h3>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://assets.st-note.com/production/uploads/images/104263139/74f069ce4f6ee06efd268a1d49a50515.jpeg?fit=bounds&amp;format=jpeg&amp;height=1024&amp;quality=85&amp;width=1024");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://note.com/temoki/m/ma8f3768bab14" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">GAI</span> <span class="portfolio-card-category-year">(noteマガジン)</span></p>
+            <h3 class="portfolio-card-title">Generative AIや汎用人工知能についてのエッセイ</h3>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://assets.st-note.com/production/uploads/images/105264685/17ce8e4b9223788b6e02ad2335186969.png?fit=bounds&amp;format=jpeg&amp;height=1024&amp;quality=85&amp;width=1024");'></div>
+          </div>
+        </a>
+        <a class="portfolio-card" href="https://note.com/temoki/n/n4f1b05afdbc9" target="_blank">
+          <div class="portfolio-card-content">
+            <p class="portfolio-card-category"><span class="portfolio-card-category-name">その他</span> <span class="portfolio-card-category-year">(2015-)</span></p>
+            <h3 class="portfolio-card-title">本業で執筆したブログや受けたインタビューなどのまとめ</h3>
+          </div>
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-image-bg" style='background-image: url("https://assets.st-note.com/production/uploads/images/124059177/rectangle_large_type_2_ce908f6eb48a10e3262bf4f58f7c76e4.png?fit=bounds&amp;quality=85&amp;width=1280");'></div>
+          </div>
+        </a>
+      </div>
+    </section>   
+    <footer class="footer">
+      <p class="footer-credit">This website was designed using <a href="https://stitch.withgoogle.com" target="_blank">Stitch</a> and built with <a href="https://claude.ai" target="_blank">Claude Code</a>.</p>      
+      <p class="footer-text">&copy; 2026 temoki</p>
+    </footer>
+  </main>
+</body>
+</html>
