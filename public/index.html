@@ -1,6 +1,15 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
+<html lang="en">
 <head>
+  <script>
+    // FOUC prevention - apply theme immediately before page renders
+    (function() {
+      const savedTheme = localStorage.getItem('theme-preference');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = savedTheme ? savedTheme === 'dark' : systemPrefersDark;
+      document.documentElement.classList.add(isDark ? 'dark' : 'light');
+    })();
+  </script>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
   <meta name="theme-color" content="#F2F2F7"/>
@@ -35,8 +44,11 @@
         extend: {
           colors: {
             "primary": "#007AFF",
+            "primary-dark": "#0A84FF",
             "background-light": "#F2F2F7",
+            "background-dark": "#000000",
             "card-light": "#FFFFFF",
+            "card-dark": "#1C1C1E",
             "secondary-card": "#FBFBFD",
           },
           fontFamily: {
@@ -57,7 +69,6 @@
   <style type="text/tailwindcss">
     body {
       -webkit-font-smoothing: antialiased;
-      background-color: #F2F2F7;
     }
     .grid {
       display: grid;
@@ -80,25 +91,28 @@
       @apply flex items-center gap-2 mb-4 ml-1;
     }
     .section-header {
-      @apply text-[11px] font-bold text-gray-400 tracking-widest;
+      @apply text-[11px] font-bold text-gray-400 dark:text-gray-500 tracking-widest;
     }
     .section-icon {
-      @apply text-gray-400 text-[14px];
+      @apply text-gray-400 dark:text-gray-500 text-[14px];
     }
     .portfolio-section {
       @apply mb-16;
     }
     /* Profile card */
     .profile-card {
-      @apply col-span-2 md:col-span-4 row-span-2 bg-card-light p-8 rounded-3xl
+      @apply col-span-2 md:col-span-4 row-span-2 bg-card-light dark:bg-card-dark p-8 rounded-3xl
              flex flex-col justify-between relative overflow-hidden;
       box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    }
+    .dark .profile-card {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
     }
     .profile-card-content {
       @apply relative z-10;
     }
     .profile-card-avatar {
-      @apply size-24 rounded-full bg-cover bg-center mb-6 border-[3px] border-gray-50 shadow-sm;
+      @apply size-24 rounded-full bg-cover bg-center mb-6 border-[3px] border-gray-50 dark:border-gray-700 shadow-sm;
     }
     .profile-card-username {
       @apply text-3xl font-bold tracking-tight mb-2;
@@ -107,33 +121,45 @@
       @apply flex items-center gap-2 mb-3;
     }
     .profile-card-name {
-      @apply text-lg text-gray-600 font-medium;
+      @apply text-lg text-gray-600 dark:text-gray-300 font-medium;
     }
     .profile-card-location {
-      @apply text-base text-gray-400 font-medium;
+      @apply text-base text-gray-400 dark:text-gray-500 font-medium;
     }
     .profile-card-bio {
-      @apply text-gray-500 font-medium leading-relaxed;
+      @apply text-gray-500 dark:text-gray-400 font-medium leading-relaxed;
     }
     /* Social card */
     .social-card {
-      @apply col-span-1 row-span-1 bg-card-light p-5 rounded-3xl
+      @apply col-span-1 row-span-1 bg-card-light dark:bg-card-dark p-5 rounded-3xl
              flex flex-col items-start justify-center active:scale-95 transition-all duration-200;
       box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    }
+    .dark .social-card {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
     }
     .social-card:hover {
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
       transform: translateY(-4px);
     }
+    .dark .social-card:hover {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
     /* Portfolio card */
     .portfolio-card {
-      @apply col-span-2 row-span-1 bg-card-light rounded-3xl
+      @apply col-span-2 row-span-1 bg-card-light dark:bg-card-dark rounded-3xl
              overflow-hidden flex active:scale-[0.98] transition-all duration-200;
       box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    }
+    .dark .portfolio-card {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
     }
     .portfolio-card:hover {
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
       transform: translateY(-4px);
+    }
+    .dark .portfolio-card:hover {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     }
     .portfolio-card-content {
       @apply w-1/2 p-6 flex flex-col justify-start;
@@ -142,16 +168,16 @@
       @apply w-1/2 py-4 pr-4 flex items-center justify-center;
     }
     .portfolio-card-image-bg {
-      @apply w-full h-full bg-cover bg-center rounded-2xl border border-black/5;
+      @apply w-full h-full bg-cover bg-center rounded-2xl border border-black/5 dark:border-white/10;
     }
     .portfolio-card-category {
       @apply text-[10px] mb-1 tracking-widest;
     }
     .portfolio-card-category-name {
-      @apply font-bold text-primary;
+      @apply font-bold text-primary dark:text-primary-dark;
     }
     .portfolio-card-category-year {
-      @apply font-normal text-gray-400;
+      @apply font-normal text-gray-400 dark:text-gray-500;
     }
     .portfolio-card-title {
       @apply text-sm font-bold leading-tight;
@@ -160,30 +186,51 @@
       @apply flex flex-wrap gap-1.5 mt-3;
     }
     .portfolio-card-tag {
-      @apply px-2 py-0.5 text-[10px] font-semibold text-gray-500 bg-gray-100 rounded-full;
+      @apply px-2 py-0.5 text-[10px] font-semibold text-gray-500 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-full;
     }
     /* Social card children */
     .social-card-icon {
       @apply w-7 h-7;
     }
     .social-card-domain {
-      @apply text-xs text-gray-400 mt-3;
+      @apply text-xs text-gray-400 dark:text-gray-500 mt-3;
     }
     .social-card-username {
-      @apply text-sm font-semibold text-gray-700;
+      @apply text-sm font-semibold text-gray-700 dark:text-gray-200;
     }
     /* Footer */
     .footer {
       @apply text-center pb-8;
     }
     .footer-text {
-      @apply text-[11px] font-bold text-gray-400 tracking-[0.2em];
+      @apply text-[11px] font-bold text-gray-400 dark:text-gray-500 tracking-[0.2em];
     }
     .footer-credit {
-      @apply text-xs text-gray-400 mb-3;
+      @apply text-xs text-gray-400 dark:text-gray-500 mb-3;
     }
     .footer-credit a {
-      @apply text-gray-500 hover:text-gray-600 underline underline-offset-2 transition-colors;
+      @apply text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 underline underline-offset-2 transition-colors;
+    }
+    /* iOS-style toggle switch */
+    .ios-toggle {
+      @apply relative w-[51px] h-[31px] rounded-full bg-[#E9E9EB] border-none cursor-pointer transition-colors duration-200;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .dark .ios-toggle {
+      @apply bg-[#39393D];
+    }
+    .ios-toggle[aria-checked="true"] {
+      @apply bg-[#34C759];
+    }
+    .ios-toggle-thumb {
+      @apply absolute top-[2px] left-[2px] w-[27px] h-[27px] rounded-full bg-white transition-transform duration-200;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15), 0 1px 1px rgba(0, 0, 0, 0.16);
+    }
+    .ios-toggle[aria-checked="true"] .ios-toggle-thumb {
+      transform: translateX(20px);
+    }
+    .ios-toggle:focus-visible {
+      @apply outline-2 outline-primary outline-offset-2;
     }
   </style>
   <style>
@@ -197,10 +244,18 @@
     }
   </style>
 </head>
-<body class="text-[#1D1D1F] transition-colors duration-300">
+<body class="bg-background-light dark:bg-background-dark text-[#1D1D1F] dark:text-white transition-colors duration-300">
+  <!-- Theme Toggle Switch -->
+  <div class="fixed top-4 right-4 z-50 flex items-center gap-2">
+    <span class="material-symbols-outlined text-base text-gray-400 dark:text-gray-500 transition-colors">light_mode</span>
+    <button id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="ダークモード切り替え" class="ios-toggle">
+      <span class="ios-toggle-thumb"></span>
+    </button>
+    <span class="material-symbols-outlined text-base text-gray-400 dark:text-yellow-400 transition-colors">dark_mode</span>
+  </div>
   <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-    <div class="absolute top-[-5%] left-[-10%] size-[400px] bg-blue-400/10 rounded-full blur-[100px]"></div>
-    <div class="absolute bottom-[10%] right-[-5%] size-[350px] bg-indigo-400/10 rounded-full blur-[80px]"></div>
+    <div class="absolute top-[-5%] left-[-10%] size-[400px] bg-blue-400/10 dark:bg-blue-500/5 rounded-full blur-[100px]"></div>
+    <div class="absolute bottom-[10%] right-[-5%] size-[350px] bg-indigo-400/10 dark:bg-indigo-500/5 rounded-full blur-[80px]"></div>
   </div>
   <main class="max-w-md md:max-w-3xl mx-auto px-4 pt-16 pb-20">
     <section class="portfolio-section" id="profile">
@@ -532,11 +587,76 @@
           </div>
         </a>
       </div>
-    </section>   
+    </section>
     <footer class="footer">
-      <p class="footer-credit">This website was designed using <a href="https://stitch.withgoogle.com" target="_blank">Stitch</a> and built with <a href="https://claude.ai" target="_blank">Claude Code</a>.</p>      
+      <p class="footer-credit">This website was designed using <a href="https://stitch.withgoogle.com" target="_blank">Stitch</a> and built with <a href="https://claude.ai" target="_blank">Claude Code</a>.</p>
       <p class="footer-text">&copy; 2026 temoki</p>
     </footer>
   </main>
+  <script>
+    const ThemeManager = {
+      STORAGE_KEY: 'theme-preference',
+
+      init() {
+        const savedTheme = localStorage.getItem(this.STORAGE_KEY);
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDark = savedTheme ? savedTheme === 'dark' : systemPrefersDark;
+
+        this.applyTheme(isDark);
+        this.watchSystemPreference();
+        this.initToggle();
+      },
+
+      applyTheme(isDark) {
+        const html = document.documentElement;
+        const themeColor = document.querySelector('meta[name="theme-color"]');
+
+        html.classList.remove('light', 'dark');
+        html.classList.add(isDark ? 'dark' : 'light');
+
+        if (themeColor) {
+          themeColor.content = isDark ? '#000000' : '#F2F2F7';
+        }
+
+        const toggle = document.getElementById('theme-toggle');
+        if (toggle) {
+          toggle.setAttribute('aria-checked', isDark ? 'true' : 'false');
+        }
+      },
+
+      toggle() {
+        const isDark = document.documentElement.classList.contains('dark');
+        const newTheme = !isDark;
+
+        this.applyTheme(newTheme);
+        localStorage.setItem(this.STORAGE_KEY, newTheme ? 'dark' : 'light');
+      },
+
+      watchSystemPreference() {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        mediaQuery.addEventListener('change', (e) => {
+          const savedTheme = localStorage.getItem(this.STORAGE_KEY);
+          if (!savedTheme) {
+            this.applyTheme(e.matches);
+          }
+        });
+      },
+
+      initToggle() {
+        const toggle = document.getElementById('theme-toggle');
+        if (!toggle) return;
+
+        toggle.addEventListener('click', () => this.toggle());
+        toggle.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.toggle();
+          }
+        });
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => ThemeManager.init());
+  </script>
 </body>
 </html>
