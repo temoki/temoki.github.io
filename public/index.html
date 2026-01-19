@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
   <script>
-    // FOUC prevention - apply theme immediately before page renders
+    // Apply system theme immediately to prevent flash
     (function() {
-      const savedTheme = localStorage.getItem('theme-preference');
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const isDark = savedTheme ? savedTheme === 'dark' : systemPrefersDark;
+      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       document.documentElement.classList.add(isDark ? 'dark' : 'light');
     })();
   </script>
@@ -211,27 +209,6 @@
     .footer-credit a {
       @apply text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 underline underline-offset-2 transition-colors;
     }
-    /* iOS-style toggle switch */
-    .ios-toggle {
-      @apply relative w-[51px] h-[31px] rounded-full bg-[#E9E9EB] border-none cursor-pointer transition-colors duration-200;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .dark .ios-toggle {
-      @apply bg-[#39393D];
-    }
-    .ios-toggle[aria-checked="true"] {
-      @apply bg-[#34C759];
-    }
-    .ios-toggle-thumb {
-      @apply absolute top-[2px] left-[2px] w-[27px] h-[27px] rounded-full bg-white transition-transform duration-200;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15), 0 1px 1px rgba(0, 0, 0, 0.16);
-    }
-    .ios-toggle[aria-checked="true"] .ios-toggle-thumb {
-      transform: translateX(20px);
-    }
-    .ios-toggle:focus-visible {
-      @apply outline-2 outline-primary outline-offset-2;
-    }
   </style>
   <style>
     body {
@@ -245,14 +222,6 @@
   </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-[#1D1D1F] dark:text-white transition-colors duration-300">
-  <!-- Theme Toggle Switch -->
-  <div class="fixed top-4 right-4 z-50 flex items-center gap-2">
-    <span class="material-symbols-outlined text-base text-gray-400 dark:text-gray-500 transition-colors">light_mode</span>
-    <button id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="ダークモード切り替え" class="ios-toggle">
-      <span class="ios-toggle-thumb"></span>
-    </button>
-    <span class="material-symbols-outlined text-base text-gray-400 dark:text-yellow-400 transition-colors">dark_mode</span>
-  </div>
   <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
     <div class="absolute top-[-5%] left-[-10%] size-[400px] bg-blue-400/10 dark:bg-blue-500/5 rounded-full blur-[100px]"></div>
     <div class="absolute bottom-[10%] right-[-5%] size-[350px] bg-indigo-400/10 dark:bg-indigo-500/5 rounded-full blur-[80px]"></div>
@@ -595,21 +564,15 @@
   </main>
   <script>
     const ThemeManager = {
-      STORAGE_KEY: 'theme-preference',
-
       init() {
-        const savedTheme = localStorage.getItem(this.STORAGE_KEY);
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const isDark = savedTheme ? savedTheme === 'dark' : systemPrefersDark;
-
-        this.applyTheme(isDark);
+        this.applySystemTheme();
         this.watchSystemPreference();
-        this.initToggle();
       },
 
-      applyTheme(isDark) {
+      applySystemTheme() {
         const html = document.documentElement;
         const themeColor = document.querySelector('meta[name="theme-color"]');
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
         html.classList.remove('light', 'dark');
         html.classList.add(isDark ? 'dark' : 'light');
@@ -617,41 +580,11 @@
         if (themeColor) {
           themeColor.content = isDark ? '#000000' : '#F2F2F7';
         }
-
-        const toggle = document.getElementById('theme-toggle');
-        if (toggle) {
-          toggle.setAttribute('aria-checked', isDark ? 'true' : 'false');
-        }
-      },
-
-      toggle() {
-        const isDark = document.documentElement.classList.contains('dark');
-        const newTheme = !isDark;
-
-        this.applyTheme(newTheme);
-        localStorage.setItem(this.STORAGE_KEY, newTheme ? 'dark' : 'light');
       },
 
       watchSystemPreference() {
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        mediaQuery.addEventListener('change', (e) => {
-          const savedTheme = localStorage.getItem(this.STORAGE_KEY);
-          if (!savedTheme) {
-            this.applyTheme(e.matches);
-          }
-        });
-      },
-
-      initToggle() {
-        const toggle = document.getElementById('theme-toggle');
-        if (!toggle) return;
-
-        toggle.addEventListener('click', () => this.toggle());
-        toggle.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            this.toggle();
-          }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+          this.applySystemTheme();
         });
       }
     };
