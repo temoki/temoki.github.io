@@ -127,6 +127,27 @@
     .profile-card-bio {
       @apply text-gray-500 dark:text-gray-400 font-medium leading-relaxed;
     }
+    .profile-card-avatar-container {
+      @apply relative size-24 mb-6 cursor-pointer;
+    }
+    .profile-card-avatar-container > * {
+      @apply absolute inset-0 size-full rounded-full transition-all duration-300;
+    }
+    .profile-card-avatar-container .profile-card-avatar {
+      @apply mb-0;
+    }
+    .profile-card-avatar-container .profile-card-qr {
+      @apply opacity-0 scale-75;
+    }
+    .profile-card-avatar-container .profile-card-qr img {
+      @apply size-full rounded-full object-cover;
+    }
+    .profile-card-avatar-container.show-qr .profile-card-avatar {
+      @apply opacity-0 scale-75;
+    }
+    .profile-card-avatar-container.show-qr .profile-card-qr {
+      @apply opacity-100 scale-100;
+    }
     /* Social card */
     .social-card {
       @apply col-span-1 row-span-1 bg-card-light dark:bg-card-dark p-5 rounded-3xl
@@ -231,7 +252,13 @@
       <div class="grid">
         <div class="profile-card">
           <div class="profile-card-content">
-            <div class="profile-card-avatar" style='background-image: url("assets/profile.jpg");'></div>
+            <div class="profile-card-avatar-container" onclick="this.classList.toggle('show-qr')">
+              <div class="profile-card-avatar" style='background-image: url("assets/profile.jpg");'></div>
+              <div class="profile-card-qr">
+                <img class="block dark:hidden" src="assets/qr_code_l.png" alt="QR Code"/>
+                <img class="hidden dark:block" src="assets/qr_code_d.png" alt="QR Code"/>
+              </div>
+            </div>
             <h1 class="profile-card-username">@temoki</h1>
             <div class="profile-card-info">
               <p class="profile-card-name">Tomoki Kobayashi</p>
